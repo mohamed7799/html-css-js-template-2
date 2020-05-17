@@ -1,0 +1,178 @@
+@import './assets/resst';
+@import './assets/mixins';
+@import './assets/variables';
+
+//header
+header {
+    background-image: linear-gradient(to right, $primery-color, $grad-color);
+    padding: 3rem 6rem;
+    color: white;
+
+    @include mobile {
+        padding: 2rem;
+        background-color: $primery-color;
+        background-image: none;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 1.5rem;
+        font-size: small;
+        font-weight: bold;
+        color: #d8d8d8;
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+#logo {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+
+    @include mobile {
+        justify-content: space-between;
+        margin-right: 0;
+        width: 100%;
+    }
+
+
+    img {
+        margin-right: 1rem;
+    }
+}
+
+#intro {
+    display: flex;
+    margin-top: 6rem;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: xxx-large;
+        letter-spacing: 4px;
+    }
+}
+
+#intro__text {
+    &>* {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: .9rem;
+
+        i {
+            margin-right: .5rem;
+            font-size: .8rem;
+        }
+
+        &:last-child {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.btn {
+    color: white;
+    border: 2px solid white;
+    border-radius: 4rem;
+    padding: .8rem;
+    width: max-content;
+}
+
+//header
+
+//feature
+
+#featsures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 4rem;
+    grid-gap: 1rem;
+}
+
+.card {
+
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    i {
+        color: #f5593d;
+        font-size: 3rem;
+        margin-right: 2rem;
+    }
+}
+
+.card__text {
+
+    h3 {
+        margin-bottom: 1rem;
+        font-size: x-large;
+    }
+
+    p {
+        color: $text-color;
+    }
+}
+
+//featsure
+hr {
+    width: 60%;
+    margin: 1rem auto;
+    border: .5px solid #F1EAE0;
+}
+
+//about
+#about {
+    display: flex;
+    padding: 4rem 6rem;
+
+    @include mobile {
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+}
+
+#about__img {
+    flex: 3;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#about__text {
+    h2 {
+        font-size: xx-large;
+    }
+
+    flex: 5;
+
+    &>* {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $text-color;
+    }
+
+    i {
+        margin-right: .5rem;
+        font-size: .8rem;
+    }
+}
+
+
+
+//about
