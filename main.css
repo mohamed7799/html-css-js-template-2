@@ -64,6 +64,15 @@ nav p {
   }
 }
 
+#down-link {
+  cursor: pointer;
+}
+
+#down-link:hover {
+  background-color: white;
+  color: #FE702E;
+}
+
 #logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,21 +336,26 @@ hr {
   background-color: #FE702E;
 }
 
-#prices {
+#prices,
+#customers {
   text-align: center;
   margin: 10rem 4rem;
 }
 
 #prices h1,
-#prices > p {
+#prices > p,
+#customers h1,
+#customers > p {
   margin-bottom: 3rem;
 }
 
-#prices h1 {
+#prices h1,
+#customers h1 {
   font-size: 3rem;
 }
 
-#prices > P {
+#prices > P,
+#customers > P {
   color: #888786;
   width: 70%;
   margin: auto;
@@ -427,5 +441,201 @@ hr {
   background-image: linear-gradient(to right, #FE702E, #F7395F);
   color: white;
   border: none;
+}
+
+#cus-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 0rem;
+}
+
+@media screen and (max-width: 800px) {
+  #cus-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.cus_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+  margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .cus_card {
+    margin-bottom: 2rem;
+  }
+}
+
+.card_review {
+  color: #888786;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.card_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+.card_info img {
+  border-radius: 50%;
+  width: 90px;
+}
+
+.info_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info_text span {
+  margin-bottom: 1rem;
+}
+
+.info_text > span:nth-child(1) {
+  font-weight: bold;
+}
+
+.info_text > span:nth-child(2) {
+  color: #888786;
+}
+
+#down {
+  background-image: -webkit-gradient(linear, left top, right top, from(#FE702E), to(#F7395F));
+  background-image: linear-gradient(to right, #FE702E, #F7395F);
+  padding: 2rem;
+}
+
+#down h1 {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+#down-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  #down-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.down_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1.5rem 3rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.down_card i {
+  font-size: 3rem;
+  margin-right: 1rem;
+  color: #888786;
+}
+
+.down_card > span:nth-child(1) {
+  font-weight: bold;
+}
+
+.down_card > span:nth-child(2) {
+  color: #888786;
+}
+
+.down_card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 2px #c2c2c2;
+          box-shadow: 0px 2px 2px #c2c2c2;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+@media screen and (max-width: 800px) {
+  .down_card {
+    margin-bottom: 2rem;
+  }
+}
+
+.down_text > p:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.down_text > p:nth-child(2) {
+  color: #888786;
+}
+
+footer {
+  padding: 4rem;
+  background-color: #252422;
+}
+
+.icons {
+  width: 20%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icons i {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .icons {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

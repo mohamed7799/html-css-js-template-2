@@ -32,6 +32,15 @@ nav {
     }
 }
 
+#down-link {
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: $primery-color;
+    }
+}
+
 #logo {
     display: flex;
     margin-right: auto;
@@ -273,7 +282,8 @@ hr {
 
 //prices
 
-#prices {
+#prices,
+#customers {
     text-align: center;
     margin: 10rem 4rem;
 
@@ -354,4 +364,157 @@ hr {
     background-image: linear-gradient(to right, $primery-color, $grad-color);
     color: white;
     border: none;
+}
+
+//customers
+
+#cus-cards {
+    display: flex;
+    margin: 5rem 0rem;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.cus_card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin: 10px;
+
+    @include mobile {
+        margin-bottom: 2rem;
+    }
+}
+
+.card_review {
+    color: $text-color;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+.card_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    img {
+        border-radius: 50%;
+        width: 90px;
+    }
+}
+
+.info_text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    justify-content: center;
+
+    span {
+        margin-bottom: 1rem;
+    }
+
+    &>span:nth-child(1) {
+        font-weight: bold;
+    }
+
+    &>span:nth-child(2) {
+        color: $text-color;
+    }
+}
+
+//download
+
+#down {
+    background-image: linear-gradient(to right, $primery-color, $grad-color);
+    padding: 2rem;
+
+    h1 {
+        padding: 2rem;
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+#down-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.down_card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5rem 3rem;
+    transition: .3s;
+
+    i {
+        font-size: 3rem;
+        margin-right: 1rem;
+        color: $text-color;
+    }
+
+    &>span:nth-child(1) {
+        font-weight: bold;
+    }
+
+    &>span:nth-child(2) {
+        color: $text-color;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 2px 2px #c2c2c2;
+        transform: translateY(-15px);
+    }
+
+    @include mobile {
+        margin-bottom: 2rem;
+    }
+}
+
+.down_text {
+    &>p:nth-child(1) {
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
+
+    &>p:nth-child(2) {
+        color: $text-color;
+    }
+}
+
+//footer
+
+footer {
+    padding: 4rem;
+    background-color: #252422;
+}
+
+.icons {
+    width: 20%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+
+    i {
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    @include mobile {
+        width: 60%;
+    }
 }
