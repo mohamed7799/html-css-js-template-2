@@ -23,14 +23,6 @@ h6 {
   font-family: 'Dosis', Helvetica, Arial, sans-serif;
 }
 
-.dot-selected {
-  background-color: #FE702E;
-}
-
-.dot-hide {
-  background-color: white;
-}
-
 header {
   background-image: -webkit-gradient(linear, left top, right top, from(#FE702E), to(#F7395F));
   background-image: linear-gradient(to right, #FE702E, #F7395F);
@@ -252,15 +244,25 @@ hr {
 
 #img-slider {
   position: relative;
-}
-
-#img-slider img {
-  width: 100%;
-  margin: 1rem 0rem;
+  overflow: hidden;
 }
 
 #img-slider:hover > #btns {
   opacity: 1;
+}
+
+#img-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#img-slide img {
+  width: 100%;
+  margin: 1rem 0rem;
+  border-radius: 10px;
 }
 
 #btns {
@@ -313,6 +315,11 @@ hr {
 .dot {
   display: inline-block;
   height: 3px;
+  background-color: white;
   width: 30px;
+}
+
+.dot-selected {
+  background-color: #FE702E;
 }
 /*# sourceMappingURL=main.css.map */

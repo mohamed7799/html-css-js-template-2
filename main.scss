@@ -2,17 +2,6 @@
 @import './assets/mixins';
 @import './assets/variables';
 
-//general
-
-.dot-selected {
-    background-color: $primery-color;
-}
-
-.dot-hide {
-    background-color: white;
-}
-
-
 
 //header
 header {
@@ -215,17 +204,23 @@ hr {
 
 #img-slider {
     position: relative;
-
-    img {
-        width: 100%;
-        margin: 1rem 0rem;
-    }
+    overflow: hidden;
 
     &:hover>#btns {
         opacity: 1;
     }
 
+}
 
+#img-slide {
+    display: flex;
+    transition: .5s;
+
+    img {
+        width: 100%;
+        margin: 1rem 0rem;
+        border-radius: 10px;
+    }
 }
 
 #btns {
@@ -262,10 +257,16 @@ hr {
     justify-content: space-evenly;
     padding: 1rem;
     width: 20%;
+
 }
 
 .dot {
     display: inline-block;
     height: 3px;
+    background-color: white;
     width: 30px;
+}
+
+.dot-selected {
+    background-color: $primery-color;
 }
