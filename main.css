@@ -23,6 +23,14 @@ h6 {
   font-family: 'Dosis', Helvetica, Arial, sans-serif;
 }
 
+.dot-selected {
+  background-color: #FE702E;
+}
+
+.dot-hide {
+  background-color: white;
+}
+
 header {
   background-image: -webkit-gradient(linear, left top, right top, from(#FE702E), to(#F7395F));
   background-image: linear-gradient(to right, #FE702E, #F7395F);
@@ -221,5 +229,90 @@ hr {
 #about__text i {
   margin-right: .5rem;
   font-size: .8rem;
+}
+
+#screenshots {
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+#screenshots h1,
+#screenshots p {
+  margin-bottom: 3rem;
+}
+
+#screenshots h1 {
+  font-size: 3rem;
+}
+
+#screenshots P {
+  color: #888786;
+}
+
+#img-slider {
+  position: relative;
+}
+
+#img-slider img {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+#img-slider:hover > #btns {
+  opacity: 1;
+}
+
+#btns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  opacity: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#btns i {
+  font-size: 2rem;
+  color: #FE702E;
+}
+
+#btns i:hover {
+  cursor: pointer;
+}
+
+#dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  width: 20%;
+}
+
+.dot {
+  display: inline-block;
+  height: 3px;
+  width: 30px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,18 @@
 @import './assets/mixins';
 @import './assets/variables';
 
+//general
+
+.dot-selected {
+    background-color: $primery-color;
+}
+
+.dot-hide {
+    background-color: white;
+}
+
+
+
 //header
 header {
     background-image: linear-gradient(to right, $primery-color, $grad-color);
@@ -176,3 +188,84 @@ hr {
 
 
 //about
+
+//screenshot
+
+#screenshots {
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+
+
+
+    h1,
+    p {
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    P {
+        color: $text-color;
+    }
+
+}
+
+#img-slider {
+    position: relative;
+
+    img {
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    &:hover>#btns {
+        opacity: 1;
+    }
+
+
+}
+
+#btns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: .4s;
+
+    i {
+        font-size: 2rem;
+        color: $primery-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 20%;
+}
+
+.dot {
+    display: inline-block;
+    height: 3px;
+    width: 30px;
+}
